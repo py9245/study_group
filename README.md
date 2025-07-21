@@ -16,13 +16,13 @@
 - 금요일(SSAFY 복습 - **온라인**)
   - 금주 진행했던 수업 내용들 복습 - 월요일 평가 대비
 
-신건하 : SW_Expert_Academy_3단계 정답률 50 미만 문제 3개(첫 주엔 2개) 2달 뒤 승급
+신건하 : SW_Expert_Academy_3단계 정답률 50 미만 문제 1개 하루 한 문제
 
-박유신 : SW_Expert_Academy_3단계 정답률 50 미만 문제 4개(첫 주엔 3개) 1.5달 뒤 승급
+박유신 : SW_Expert_Academy_3단계 정답률 50 미만 문제 1개 하루 한 문제
 
-배용건, 이도성 : SW_Expert_Academy_1단계 10문제(첫주엔 7개) 1달 뒤 승급
+배용건, 이도성 : SW_Expert_Academy_1단계 하루 2문제
 
-김두진 : SW_Expert_Academy_2단계 5문제(첫주엔 3개) 1.5달 뒤 승급
+김두진 : SW_Expert_Academy_2단계 하루 한 문제
 
 ### 파일 업로드 구조
 250000_SEA문제번호.md로 저장
