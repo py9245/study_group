@@ -4,7 +4,8 @@
 ## 박유신, 배용건, 이도성, 김두진, 신건하, 김영훈
 ### 알고리즘, CS, SSAFY 복습 스터디
 [파이썬코드모음](https://codesol.how-to.best/doc/python)
-[e-book](https://ssafy5.dkyobobook.co.kr/main.ink) <- 에듀사피 로그인 후 클릭
+
+[e-book](https://ssafy5.dkyobobook.co.kr/main.ink) <- 에듀사피 로그인 후 **Ctrl** 꾹 누른채로 클릭
 
 ### 공부 계획
 - 월요일(CS - **온라인**) : 7월 28일부터
