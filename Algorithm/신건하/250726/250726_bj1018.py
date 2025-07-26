@@ -1,9 +1,9 @@
 n, m = map(int, input(). split())
 board = [list(input()) for i in range (n)]
 
+# 비교용 흑, 백 보드판 생성
 b_board = [["B"]*8 for i in range (8)]
 w_board = [["W"]*8 for i in range (8)]
-
 for i in range (8):
     for j in range (8):
         if i % 2 == 0:
@@ -20,7 +20,7 @@ def sol(x, y):
     w_cnt = 0
     b_cnt = 0
     
-    # 8x8판의 w와 b의 갯수 비교
+    # 비교용 흑, 백 보드판과 차이나는 갯수 비교
     for ii in range (8):
         for jj in range (8):
             nx = x + ii
