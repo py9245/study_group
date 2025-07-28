@@ -7,5 +7,7 @@
 # number = 5
 # double = number * 2
 # print(double)
-a = "abcde"
-print(a[:5:-1]) # False
+
+a = 1
+b = 1.0
+print(a == b)
