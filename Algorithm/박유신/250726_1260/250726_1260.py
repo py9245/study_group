@@ -1,7 +1,7 @@
-import sys
-from collections import deque
+import sys # sys 라는 s내장 함수를 import
+from collections import deque # collections 라는 모듈에서 deque 라는 메서드을 가져옴
 
-input = sys.stdin.readline
+input = sys.stdin.readline # 인풋을 받아오는데 정확히 모름
 
 N, M, V = map(int, input().split())
 gr = [[] for _ in range(N + 1)]
