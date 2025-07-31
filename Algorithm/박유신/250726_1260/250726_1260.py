@@ -1,7 +1,7 @@
 import sys
 from collections import deque
 
-input = input = sys.stdin.readline
+input = sys.stdin.readline
 
 N, M, V = map(int, input().split())
 gr = [[] for _ in range(N + 1)]
