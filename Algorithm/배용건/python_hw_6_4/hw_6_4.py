@@ -9,6 +9,8 @@ def add_item_to_dict(dictionary, key, value):
 
 
 
+
+
 my_dict = {'name': 'Alice', 'age': 25}
 result = add_item_to_dict(my_dict, 'country', 'USA')
 print(result)
