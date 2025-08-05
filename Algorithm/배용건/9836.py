@@ -12,3 +12,13 @@ print(f'#{index}')
     #     if list_B > max_num:
     #         max_num = sum(list_B)
     # print(f'#{test_case} {max_num}')
+    # max_num = list_A[0]
+    # for list_B in list_A:
+    #     if list_B > max_num:
+    #         max_num = sum(list_B)
+    # print(f'#{test_case} {max_num}')
+    # max_num = list_A[0]
+    # for list_B in list_A:
+    #     if list_B > max_num:
+    #         max_num = sum(list_B)
+    # print(f'#{test_case} {max_num}')
