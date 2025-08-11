@@ -81,4 +81,27 @@ for tc in range(1,T+1):
     print(f"#{tc} {max_value}")
 
 
+    # 4번째 연습 
+
+
+T = int(input())
+for tc in range(1,T+1):
+    N , M = map(int, input().split())
+    matrix = [list(map(int, input().split())) for _ in range(N)]
+    dx = [-1,1,0,0]
+    dy = [0,0,-1,1]
+    max_value = 0
+    for i in range(N):
+        for j in range(M):
+            num = matrix[i][j]
+
+            for kk in range(4):
+                for k in range(1,matrix[i][j]+1):
+                    x = i + dx[kk] * k
+                    y = j + dy[kk] * k
+                    if 0 <= x < N and 0 <= y < M:
+                        num += matrix[x][y]
+                if num > max_value:
+                    max_value = num
+    print(f"#{tc} {max_value}")
 
