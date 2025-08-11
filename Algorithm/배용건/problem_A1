@@ -1,0 +1,22 @@
+  # 3.1 [ requests 문서를 참고하여 HTTP GET 요청 보내는 코드 작성하기 ]
+    
+    response = requests.get(url, params=params)
+    
+
+    # 3.2 [ requests 문서를 참고하여 응답 데이터를  python의 dict 타입으로 변환하여 data 변수에 저장 ]
+    data = response.json()
+
+    return data
+
+
+# '펭귄' 키워드를 사용하여 도서 검색 데이터를 가져옵니다.
+result = fetch_books('펭귄')
+# 결과에서 도서 목록을 가져옵니다.
+books = result.get('item', [])
+
+# 4. [ 각 도서를 순회하며 넘버링과 제목을 출력하기 ]
+for idx, book in enumerate(books[:10], 1):  # 최대 10권
+    print(f"{idx}. {book.get('title')}")
+# ex) 1. 펭귄이 살아갑니다.
+#     2. 펭귄의 ...
+pass

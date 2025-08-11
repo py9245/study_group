@@ -1,0 +1,16 @@
+T = int(input())
+for test_case in range(1,T+1):
+    N , M = map(int, input().split())
+    num_list = list(map(int, input().split()))
+    first_sum = sum(num_list[0:M])
+    max_num = first_sum
+    min_num = first_sum
+    
+    for i in range(1,N-M+1):
+        num = 0
+        for k in range(M):
+        	num += num_list[i+k]
+        max_num = max(max_num,num)
+        min_num = min(min_num,num)
+        
+    print(f"#{test_case} {max_num - min_num}")
