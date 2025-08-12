@@ -29,7 +29,7 @@ for t in range(1, test+1):
 
             # print(num, 'num+', ballon[hang_i][yeol_j])
             max_num = max(max_num, num)
-    print(max_num, 'max num')
+    print(f"#{t} {max_num}")
 
 
 # *ballon[hang_i][yeol_j]
