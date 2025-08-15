@@ -1,0 +1,99 @@
+# N, K = map(int, input().split()) # N = 10 , K = 2
+# Max_num = 0
+# num = list(map(int, input().split()))
+
+# for n in range(N-K):
+#     Now_num = 0
+#     # print(num)
+#     for k in range(K): # K = 2
+#         Now_num+=num[n+k]
+#         # print(Now_num)
+
+#     Max_num = max(Max_num, Now_num)
+# print(Max_num)
+
+
+# '-----------------------------------------------------'
+
+
+#프로그래머스
+# t = "3141592"
+# p = "271"
+# ti = int(t)
+# pi = int(p)
+# # print(pi, type(pi))
+# max_num = 0
+# for i in range(ti-pi+1):
+#     f_num = ''
+#     for j in range(len(p)):
+#         # if(t[i+j]<=len(t)):
+#             f_num += t[i+j]
+#         # print(f_num , t[i+j] , "f_num과 t")
+#     # f_num.split(',')
+#     # ','.join(f_num)
+#     print(f_num)
+#     # print(pi)
+#     if(int(f_num) < pi):
+#         max_num += 1
+# print(max_num)
+#-----------------------------------------------------------
+#-> 정리한 코드들
+# t = "3141592"
+# p = "271"
+# ti = int(t)
+# pi = int(p)
+# cnt = 0
+# for i in range(len(t)-len(p)+1):
+#     f_num = '' # 빈 문자열
+#     for j in range(len(p)):
+#         f_num += t[i+j]
+#     if(int(f_num) < pi): # 정수화시킨 문자열 < pi 이면
+#         cnt += 1
+# print(cnt)
+#-------------------------------------------------------------------------
+# # 13422 도둑
+# Test = int(input())
+
+# for test in range(1, Test+1):
+#     N, M, K = map(int, input().split())
+#     house = list(map(int, input().split()))
+#     cnt = 0
+#     num = 0
+#     for n in range(N-M+1):
+#         num = sum(house[n:n+M])
+#         # cnt += 1
+#         # print(num, cnt)
+#         if(num < K):
+#             cnt += 1
+#     print(cnt)
+#-----------------------------------------------------
+# 12847 꿀알바
+# N, M = map(int,input().split())
+# Ai = list(map(int,input().split()))
+
+# Max_num = 0
+# for n in range(N-M+1):
+#     num = 0
+#     for i in range(M):
+#         print(Ai[n+i], 'Ai[i] 값')
+#         num+=Ai[n+i]
+#     print(num, 'num값')
+#     Max_num = max(Max_num, num)
+# print(Max_num)
+
+# 40분 시작
+
+# T = str(input())
+# P = str(input())
+# Pi = int(P)
+# Ti = int(T)
+# cnt = 0
+# for i in range(len(T)-len(P)+1):
+#     Ts = ''
+#     for j in range(len(P)):
+#         Ts +=T[i+j]
+#     if(int(Ts)<=Pi):
+#         cnt+=1
+# print(cnt)
+
+#회문
