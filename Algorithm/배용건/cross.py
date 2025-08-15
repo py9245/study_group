@@ -5,8 +5,9 @@ sys.stdin = open("input (1).txt", "r")
 T = int(input())
 N = 100
 for tc in range(1,T+1):
+    
     matrix = [list(map(int, input().split())) for _ in range(N)]
-    max_num = 0
+    max_num = 100
     i_max = []
     j_max = []
     
