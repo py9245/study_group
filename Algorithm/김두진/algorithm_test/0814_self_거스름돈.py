@@ -9,5 +9,6 @@ for test_case in range(1,T+1):
             gu = money // value
             money = money - (value*gu)
             t_lst[idx] = gu
+            
 print(f'#{test_case}')
 print(" ".join(map(str,t_lst)))
