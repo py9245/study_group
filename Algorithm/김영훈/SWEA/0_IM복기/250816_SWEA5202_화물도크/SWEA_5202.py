@@ -1,33 +1,26 @@
-# # 12:50 ~ 14:10  포기
-# test = int(input())
+test = int(input())
 
-# for t in range(1, test+1):
-#     num = int(input())
-#     time_se = []
-#     e = []
-#     # time_fl = []
-#     for n in range(num):
-#         s, e = map(int, input().split())
-#         time_se.append([s, e])  # time
-#         e.append(e)
-#         e.sort()
-#     # print(time)
-#     for i in time_se:  # 각 배열 안의 시작, 끝 = i
+for t in range(1, test+1):
+    num = int(input())
+    cnt = 1
 
-#         for start, end in i:
-#             # 배열의 첫 시작
-#             for 시작 시간들 비교 range(num):
-                
+    
+    se = []
+    for n in range(num):
+        s, e = map(int, input().split())
+        se.append([s,e])
+    se.sort(key=lambda x: x[1])  # 리스트에 넣고 2열 기준 오름차순정렬
+    a = se[0][1]
 
-
-
-
-
+    
+    for i in range(num):
+        new_time = []
+        if a <= se[i][0]:  # 종료시간 <= 시작시간
+            # print(a, se[i], se[i][0], '| 종료시간, 시작시간, 종료시간')
+            new_time.append(se[i][1]) # 종료시간
+            a = min(new_time)
+            # print(a, '초기화된 종료시간')
+            cnt += 1
 
 
-    # for time_se in time:
-    #     cnt = 0  # 시간 길이
-    #     for time_length in range(time_se[0], time_se[1]):
-    #         cnt += 1
-    #     time_fl.append(cnt)
-    # print(time_fl)
+    print(f"#{t} {cnt}")
