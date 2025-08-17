@@ -1,7 +1,7 @@
 T = int(input())
 for test_case in range(1, T + 1):
     n = int(input())
-    arr = [list(map(int, input().strip())) for _ in range(N)]
+    arr = [list(map(int, input().strip())) for _ in range(n)]
     
     mid = n // 2
     total = 0
