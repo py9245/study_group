@@ -13,5 +13,4 @@ for test_case in range(1, T + 1):
         end = n - dist
 
         total += sum(arr[i][start:end])
-    
     print(f"#{test_case} {total}")
