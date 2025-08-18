@@ -9,14 +9,17 @@ for test_case in range(1,t+1):
     N , M = map(int,input().split()) 
     # 0으로 채워진 배열을 N만큼 오셀로판을 만듬
     arr = [list([0] * N) for _ in range(N)]
-    arr[1][1] = 2
-    arr[2][2] = 2
-    arr[2][1] = 1
-    arr[1][2] = 1
+    mid = N // 2
+    arr[mid][mid] = 2
+    arr[mid-1][mid-1] = 2
+    arr[mid-1][mid] = 1
+    arr[mid][mid-1] = 1
     for a in range(M):
         # 입력 받아오기 이 때, c에 들어오는 1, 2 는 흑돌과 백돌을 의미함
+        x = x - 1
+        y = y - 1
         x, y, c = map(int,input().split())
-        arr[x-1][y-1] = c
+        arr[x][y] = c
         
         
     print(arr)
