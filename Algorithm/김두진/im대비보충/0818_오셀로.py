@@ -18,4 +18,5 @@ for test_case in range(1,t+1):
         x, y, c = map(int,input().split())
         arr[x-1][y-1] = c
         
+        
     print(arr)
