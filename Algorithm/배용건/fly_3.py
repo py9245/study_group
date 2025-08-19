@@ -42,15 +42,15 @@ for tc in range(1,T+1):
     dy = [0,0,-1,1] # 델타탐색 십자 기준 좌표
     di = [-1,1,-1,1]
     dj = [-1,-1,1,1] # 델타탐색 엑스자 기준 좌표
-    kill_max = 0
+    kill_max = 0 #파리 최대 죽인수
     for i in range(N):
         for j in range(N):
             ten_kill = fly_list[i][j] # 십자로 죽인 파리수
             for k in range(4): # 4방향 순회
-                for dist in range(1,M): # 중심값 포함 기준 M 
+                for dist in range(1,M): # 중심값 포함 기준 M (길이)
                     ni = i + dx[k] * dist
                     nj = j + dy[k] * dist
-                    if 0 <= ni < N and 0 <= nj < N:
+                    if 0 <= ni < N and 0 <= nj < N: # N x N 배열 범위 설정
                         ten_kill += fly_list[ni][nj]
                     else :
                         break
