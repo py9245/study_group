@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      width: 100px;
+      height: 100px;
+      background-color: skyblue;
+      border: 1px solid black;
+    }
+
+    .responsive-margin{
+      margin: 0;
+    }
+
+    @media (min-width: 768px){
+      .responsive-margin{
+        margin: 24px;
+      }
+    }
+
+    @media (min-width:1200px){
+      .responsive-margin{
+        margin: 48px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="responsive-margin">
+  <span >div</span>
+</div>
+</body>
+</html>
