@@ -7,7 +7,7 @@ def dijkstra(graph, start, goal):
     # graph: 인접 리스트, graph[u] = [(v, w), ...]
     N = len(graph) - 1          # 정점이 0..N 이라면 길이는 N+1
     dist = [('inf')] * (N + 1)
-    dist[start] = 0
+    dist[start] = 0    # dist = [0, inf, inf, inf, inf, inf]
 
     # (현재까지의 거리, 노드)
     heap = [(0, start)]
