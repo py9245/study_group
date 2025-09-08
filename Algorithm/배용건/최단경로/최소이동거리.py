@@ -6,7 +6,7 @@ sys.stdin = open('.txt','r')
 def dijkstra(graph, start, goal):
     # graph: 인접 리스트, graph[u] = [(v, w), ...]
     N = len(graph) - 1          # 정점이 0..N 이라면 길이는 N+1
-    dist = [('inf')] * (N + 1)
+    dist = [float('inf')] * (N + 1)
     dist[start] = 0    # dist = [0, inf, inf, inf, inf, inf]
 
     # (현재까지의 거리, 노드)
@@ -33,7 +33,7 @@ def dijkstra(graph, start, goal):
 T = int(input())
 for tc in range(1, T + 1):
     N, E = map(int, input().split())
-    road = [list(map(int, input().split())) for _ in range(E)]
+    
     graph = [[] for _ in range(N + 1)]
     for _ in range(E):
         u, v, w = map(int, input().split())
