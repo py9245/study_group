@@ -54,7 +54,7 @@ for tc in range(1, T + 1):
 
 
 
-
+import heapq
 
 def dijkstra(graph, start, goal):
     Q = len(graph) - 1
