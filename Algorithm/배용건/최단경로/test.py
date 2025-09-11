@@ -90,4 +90,39 @@ for tc in range(1, T + 1):
         graph[s].append((e,w))
 
     ans = dijkstra(graph, 0, N)
-    print()
+    print(f"#{tc} {ans}")
+
+
+
+
+def dijkstra(graph, start, goal):
+    Q = len(graph) - 1
+    dist = [float('inf')] * (Q + 1)
+    dist[start] = 0
+    heap = [([0, start])]
+
+    while heap:
+        cur_dist, n = heapq.heappop(heap)
+        if cur_dist > dist[n]:
+            continue
+
+        if n == goal:
+            return cur_dist
+        
+        for e, w in graph[n]:
+            new_dist = cur_dist + w
+
+            if new_dist < dist[e]:
+                dist[e] = new_dist
+                heapq.heappush(heap, (new_dist, e))
+
+        
+T = int(input())
+for tc in range(1, T + 1):
+    N, E = map(int, input().split())
+    graph = [[] for _ in range(N + 1)]
+    for _ in range(E):
+        s, e, w = map(int, input().split())
+        graph[s].append((e, w))
+    ans = dijkstra(graph, 0, N)
+    print(f"#{tc} {ans}")
