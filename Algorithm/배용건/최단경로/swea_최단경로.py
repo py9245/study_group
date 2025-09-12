@@ -6,6 +6,7 @@ sys.stdin = open('input1.txt','r')
 
 
 
+
 def dijkstra(graph, start, goal):
     N = len(graph)
     dist = [float('inf')] * N
