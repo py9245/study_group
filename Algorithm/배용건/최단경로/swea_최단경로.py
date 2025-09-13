@@ -32,6 +32,7 @@ def dijkstra(graph, start, goal):
         return dist[goal]
 
 
+
 T = int(input())
 for tc in range(1, T + 1):
     N, E = map(int, input().split()) 
