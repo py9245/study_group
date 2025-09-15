@@ -20,9 +20,9 @@ def dijkstra(N, arr):
 
             if 0 <= nx < N and 0 <= ny < N :
                 new_cost = cur_cost + arr[nx][ny]
-
-                if new_cost < dist[nx][ny]:
-                    dist[nx][ny] = new_cost   
+                # 새로운 비용 = 최소비용 + 다음 이동할 곳의 비용
+                if new_cost < dist[nx][ny]: # 새로운 비용 < 현재까지 누적비용
+                    dist[nx][ny] = new_cost  # 현재까지 누적비용 = 새로운 비용 
                     heapq.heappush(heap,(new_cost,nx,ny))
     return dist[N-1][N-1] # 도착지점의 값 리턴
 
