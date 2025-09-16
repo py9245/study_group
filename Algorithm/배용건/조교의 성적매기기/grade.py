@@ -5,9 +5,6 @@ sys.stdin = open("input (1).txt","r")
 
 
 
-
-
-
 T = int(input())
 grade = ['A+','A0','A-','B+','B0','B-','C+','C0','C-','D']
 for tc in range(1, T + 1):
