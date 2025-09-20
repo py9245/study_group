@@ -9,14 +9,14 @@ def root(road):  # 입력받은 변수활용해서 초기값 함수 만들기
     queue = deque()  # 데쿵으로 감싼 큐를
     queue.append((1, 1))  # 첫 시작값 큐에 넣기
 
-    visited = [[-1] * N for _ in range(N)]  # 방문처리 변수
+    visited = [[-1] * N for _ in range(N)]  # 방문처리 초기값 변수
     visited[1][1] = 0  # 시작지점을 방문처리한다
 
     while queue:  # 큐에 값이 있는 동안
         x, y = queue.popleft()    # 앞에 값을 x, y 에 할당해주고
 
         for dx, dy in dxy:   # 방향
-            nx, ny = x + dx, y + dy
+            nx, ny = x + dx, y + dy  # 현재위치에서 더한 방향으로의 위치좌표
 
             if 0 <= nx < N and 0 <= ny < N:  # 범위
                 if road[nx][ny] == 3:  # 도착했다면 1을 리턴하고
