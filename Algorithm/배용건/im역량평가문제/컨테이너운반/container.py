@@ -10,7 +10,7 @@ for tc in range(1, T + 1):
      
     total_weight = 0
  
- 
+ # 인덱스로 사용할 변수를 만든다
     w_idx, t_idx = 0, 0
  
     while w_idx < N and t_idx < M:
