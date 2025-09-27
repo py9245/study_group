@@ -6,6 +6,8 @@ dxy2 = [(0, 1)]
 dxy3 = [(-1, 0)]
 dxy4 = [(0, -1)]
 
+
+
 T = int(input())
 for tc in range(1, T + 1):
     n = int(input())
