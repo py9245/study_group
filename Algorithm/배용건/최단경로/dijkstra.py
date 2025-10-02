@@ -31,6 +31,7 @@ def dijkstra(start, graph, n):
         if dist[now] < d:
             continue
         for nxt, w in graph[now]:
+            
             nd = d + w
             if nd < dist[nxt]:
                 dist[nxt] = nd
