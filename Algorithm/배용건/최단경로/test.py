@@ -6,6 +6,7 @@ sys.stdin = open('.txt','r')
 
 
 
+
 def dijkstra(graph, start, goal):
     N = len(graph) - 1  # graph 마지막 정점 번호
     dist = [float('inf')] * N + 1
