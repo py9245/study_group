@@ -115,7 +115,7 @@ def dijkstra(graph, start, goal):
             if new_dist < dist[e]:
                 dist[e] = new_dist
                 heapq.heappush(heap, (new_dist, e))
-
+    return dist[goal]
         
 T = int(input())
 for tc in range(1, T + 1):
