@@ -8,12 +8,12 @@
 
 - 최대힙 : 부모노드 키값 > 자식노드 키값
 
-- 최소힙 : 
+- 최소힙 : 부모노드 키값 <= 자식노드 키값
 
 ##
 함수활용
 
-- heapq.heapify(x): 리스트 x 를 heap 에 추가
+- heapq.heapify(x): 리스트 x 를 heap 구조로 바꾼다
 
 - heapq.heappush(heap, item) :  item을 heap에 추가
 
