@@ -1,6 +1,9 @@
 import sys
 sys.stdin = open("input (1).txt","r")
 
+# grade 인덱스를 맞추기 위해 10의 배수이기에 10을 나눠서 일정 배율로 나눌수 있는 부분이 필요했다
+
+
 T = int(input())
 grade = ['A+','A0','A-','B+','B0','B-','C+','C0','C-','D']
 for tc in range(1, T + 1):
