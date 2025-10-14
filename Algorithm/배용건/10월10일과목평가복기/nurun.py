@@ -36,7 +36,7 @@ for tc in range(1, T + 1):
         x, y, cost = map(int, input().split())
         edges.append((x, y, cost))
 
-    edges.sort(key=lambda x: x[2])
+    edges.sort(key=lambda x: x[2])  # [2] 3번째 인덱스 기준으로   정렬을 진행 즉 가중치(비용) 기준으로 정렬함 
 
     total = 0
 
@@ -49,7 +49,7 @@ for tc in range(1, T + 1):
             count += 1
             if count == N - 1:
                 break
-    roots = set(find_set(i) for i in range(1, N + 1))
+    roots = set(find_set(i) for i in range(1, N + 1)) # set 은 중복제거이기에 i 만큼 순회할때 대표자를 찾고 중복제거한다.
     if len(roots) > 1:
         print(f"#{tc} -1")    
     else:
