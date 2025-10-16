@@ -1,23 +1,45 @@
+from collections import deque
 dxy = [[0,1],[0,-1],[1,0],[-1,0]]
 
-def find_set(x):
-    if x != p_list[x]:
-        p_list[x] = find_set(p_list[x])
-    return p_list[x]
+def bfs():
+    cnt = 0
+    for i in range(N):
+        for j in range(N):
+            if temp_visited[i][j]:
+                continue
+            
+            cnt += 1
+            queue = deque()
+            queue.append((i,j))
 
-def union(x,y):
-    px = find_set(x)
-    py = find_set(y)
-    if px != py:
-        p_list[py] = px
+            while queue:
+                x,y = queue.popleft()
+                for dx, dy in dxy:
+                    nx, ny = x+dx, y+dy
+                    if not(0 <= nx < N and 0 <= ny < N) or temp_visited[nx][ny]:
+                        continue
+                    queue.append((nx,ny))
+                    temp_visited[nx][ny] = True
+    return cnt
 
+
+
+def rain():
+    for i in range(N):
+        for j in range(N):
+            if arr[i][j] <= t:
+                visited[i][j] = True
 
 N = int(input())
-p_list = list(range(N+1))
 arr = [list(map(int,input().split())) for _ in range(N)]
 visited = [[False] * N for _ in range(N)]
-result = []
-t = 1
+result = 0
+t = 0
 
-# while t <= 100:
-    
+while t <= 100:
+    rain()
+    temp_visited = [ar[:] for ar in visited]
+    result = max(result, bfs())
+    t += 1
+
+print(result)
