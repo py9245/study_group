@@ -40,7 +40,66 @@ def find(n, s, e, fs, fe):
     return find(n * 2, s, mid, fs, fe) + find(n * 2 + 1, mid + 1, e, fs, fe)
 
 
-print(build(1, 0, N - 1))
-chang(1, 0, N - 1, 4, 10 - nums[4])
-print(seg_tree[1])
-print(find(1, 0, N - 1, 3, 4))
+build(1, 0, N - 1)
+
+for _ in range(M + K):
+    a, b, c = map(int, input().split())
+    if a == 1:
+        idx = b - 1
+        chang(1, 0, N - 1, idx, c - nums[idx])
+        nums[idx] = c
+    else:
+        s, e = b - 1, c - 1
+        print(find(1, 0, N - 1, s, e))
+#
+#
+#
+#         M + K
+
+from collections import defaultdict
+
+result_list = []
+N, M, K = map(int, input().split())
+N_dict = {}
+
+# 여러 버킷 크기 설정 (필요할수록 확장)
+bucket_sizes = [1, 2, 3, 4, 5, 10, 25, 50, 100, 250, 500, 1000, 2000, 3000, 100000]
+bucket_dicts = {b: defaultdict(int) for b in bucket_sizes}
+
+# 데이터 입력 및 버킷별 누적합 초기화
+for i in range(1, N + 1):
+    N_dict[i] = int(input().strip())
+    for b in bucket_sizes:
+        bucket_dicts[b][i // b] += N_dict[i]
+
+# 쿼리 처리
+for _ in range(M + K):
+    a, b, c = map(int, input().split())
+
+    if a == 1:  # 값 갱신
+        diff = c - N_dict[b]
+        N_dict[b] = c
+        for size in bucket_sizes:
+            bucket_dicts[size][b // size] += diff
+
+    else:  # 구간합 계산
+        result = 0
+        cnt = c - b + 1
+        temp = b
+
+        while cnt > 0:
+            # 가장 큰 버킷부터 탐색
+            for size in reversed(bucket_sizes):
+                if temp % size == 0 and cnt >= size:
+                    result += bucket_dicts[size][temp // size]
+                    cnt -= size
+                    temp += size
+                    break
+            else:
+                result += N_dict[temp]
+                cnt -= 1
+                temp += 1
+
+        result_list.append(f"{result}\n")
+
+print(''.join(result_list))
