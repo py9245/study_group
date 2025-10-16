@@ -7,6 +7,7 @@ dxy = [(1,0),(0,1),(-1,0),(0,-1)]
 # 그래프의 최대 높이 찾기
 
 
+
 def bfs(x, y, rain, visited):
     queue = deque()
     queue.append((x, y))
