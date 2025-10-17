@@ -40,7 +40,7 @@ for rain in range(0, max_height + 1):
     for i in range(N):
         for j in range(N):
             # 물에 잠기지 않았고, 방문하지 않은 경우
-            if not visited[i][j] and graph[i][j] > rain:
+            if not visited[i][j] and arr[i][j] > rain:
                 bfs(i, j, rain, visited)
                 safe_area += 1  # 한 영역 완성될 때마다 +1
 
