@@ -12,5 +12,6 @@ for a, b in re_list:
         cnt += 1
         one_list = [a, b]
 
+
 print(one_list)
 print(cnt)
