@@ -18,19 +18,18 @@ sys.stdin = open('input.txt','r')
 
 N = int(input())
 line_num = list(map(int, input().split())) 
-student = []
-real_line = [0]
-for i in range(1, N + 1):
-    student.append(i)
+student = list(range(1,N + 1))
+real_line = []
+
 
 
 
 for j in range(N):
-    if line_num[j] == 0:
-        real_line.insert(j, student[j])
-    if line_num[j] != 0:
-        real_line.insert((j-1)-line_num[j], student[j])
-print(real_line)
+    # if line_num[j] == 0:
+    #     real_line[j] = student[j]
+    # if line_num[j] != 0:
+    real_line.insert(len(real_line)-line_num[j], student[j])
+print(*real_line)
     
 
 
