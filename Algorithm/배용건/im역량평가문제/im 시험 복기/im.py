@@ -23,6 +23,8 @@ for tc in range(1, T + 1):
                     for dist in range(n):
                         nx, ny = x + dx + dist, y + dy
 
+
+
                         if 0 <= nx < n and 0 <= ny < n:
                             if arr[nx][ny] == 1:
                                 break
