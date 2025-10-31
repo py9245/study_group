@@ -31,6 +31,8 @@ for tc in range(1, T + 1):
                                 arr[nx][ny] = 3
 
 
+
+
     for i in range(n):
         for j in range(n):
             if arr[i][j] == 2:
