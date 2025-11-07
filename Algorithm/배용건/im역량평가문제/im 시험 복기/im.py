@@ -52,6 +52,7 @@ for tc in range(1, T + 1):
                 x, y = i, j
                 for dx, dy in dxy3:
 
+
                     for dist in range(n):
                         nx, ny = x + dx - dist, y + dy
                         if 0 <= nx < n and 0 <= ny < n:
