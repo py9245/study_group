@@ -62,6 +62,7 @@ for tc in range(1, T + 1):
                                 arr[nx][ny] = 3
 
 
+
     # 4방향에서 dist를 한코드에 가져갈려면? 
 
     for i in range(n):
