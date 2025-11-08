@@ -62,6 +62,8 @@ for tc in range(1, T + 1):
                                 arr[nx][ny] = 3
 
 
+    # 4방향에서 dist를 한코드에 가져갈려면? 
+
     for i in range(n):
         for j in range(n):
             if arr[i][j] == 2:
@@ -77,7 +79,7 @@ for tc in range(1, T + 1):
                                 visited[nx][ny] = True
                                 arr[nx][ny] = 3
     
-    # 합칠려면 어떻게 해야할까
+    # 합칠려면 어떻게 해야할까 
     cnt = 0
     
     for i in range(n):
