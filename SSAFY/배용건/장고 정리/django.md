@@ -69,3 +69,4 @@ def 만들 함수(request):
     return render(request, '템플릿의 articles/파일명.html')
 
 그리고 html 파일을 만들어서 확인
+
