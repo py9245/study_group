@@ -81,3 +81,7 @@ url에서 받은 번호(pk)를 이용해서 해당 데이터를 가져와!
 # Diary.objects.all()
 
 다이어리의 데이터를 전부 가져오기
+
+# 댓글 역참조 기능 구현할때는
+
+article.comment_set.all()
