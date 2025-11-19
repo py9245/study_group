@@ -85,3 +85,17 @@ url에서 받은 번호(pk)를 이용해서 해당 데이터를 가져와!
 # 댓글 역참조 기능 구현할때는
 
 article.comment_set.all()
+
+
+
+# MTV 구조의 역할
+
+Model : 데이터베이스 관련 로직 담당
+Template : 사용자에게 보여지는 화면 담당
+View : HTTP 요청을 받고 필요한 Model 데이터를 가져오거나 저장해 Template 에 넘겨 HTTP response 형태로 반환
+
+
+Model 의 역할 
+: 데이터베이스 관련 로직을 담당하며, 
+테이블 구조, 필드 타입, 제약조건을 정의
+ORM 을 통해 CRUD 를 처리한다
