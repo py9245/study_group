@@ -34,3 +34,5 @@ methods 정의 :
 ![alt text](image-3.png)
 
 ![alt text](image-4.png)
+
+장고사용자가 고객이기에 장고의 형태를 거의 그대로 재현했다고 볼 수 있다.
