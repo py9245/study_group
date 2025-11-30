@@ -88,6 +88,7 @@ article.comment_set.all()
 
 
 
+
 # MTV 구조의 역할
 
 Model : 데이터베이스 관련 로직 담당
